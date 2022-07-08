@@ -31,9 +31,14 @@ class ProductUser(db.Model):
 
 
 @app.route('/')
-def index():
+def slash():
     return 'Hello'
+
+
+@app.route('/index')
+def index():
+    return 'index'
 
 if __name__ == '__main__':
     #DEBUG is SET to TRUE. CHANGE FOR PROD
-    app.run(host='0.0.0.0',port=5000,debug=True)
+    app.run(host='0.0.0.0',port=5001,debug=True)

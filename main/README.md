@@ -10,4 +10,11 @@ sudo docker stop $(sudo docker ps -a -q)
 sudo docker rm $(sudo docker ps -a -q)
 
 sudo docker image rm $(sudo docker images -a -q)
+
+ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by '2222';  
+ sudo mysql -u -p
 ```
+
+possible errors:
+
+[mysql_config not found](https://stackoverflow.com/questions/7475223/mysql-config-not-found-when-installing-mysqldb-python-interface)
