@@ -18,3 +18,5 @@ sudo docker image rm $(sudo docker images -a -q)
 possible errors:
 
 [mysql_config not found](https://stackoverflow.com/questions/7475223/mysql-config-not-found-when-installing-mysqldb-python-interface)
+
+[docker doesn't map port](https://medium.com/@rokinmaharjan/running-a-flask-application-in-docker-80191791e143)
