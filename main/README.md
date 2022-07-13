@@ -12,7 +12,10 @@ sudo docker rm $(sudo docker ps -a -q)
 sudo docker image rm $(sudo docker images -a -q)
 
  ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by '2222';  
+
  sudo mysql -u -p
+
+ sudo rabbitmqctl add_user admin 2222
 ```
 
 possible errors:

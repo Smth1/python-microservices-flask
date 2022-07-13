@@ -5,11 +5,20 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-
+    command: 'flask db upgrade && flask run --host=0.0.0.0'
     ports:
-      - 8081:5000
+      - 8001:5000
     volumes:
       - .:/app
+    depends_on:
+      - db
+
+
+  queue:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: 'python consumer.py'
     depends_on:
       - db
 
