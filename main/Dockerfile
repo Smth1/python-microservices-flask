@@ -6,6 +6,8 @@ COPY ./requirements.txt /app/requirements.txt
 
 RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt 
 
+RUN cat /etc/hosts
+
 COPY . /app
 
 EXPOSE 5000

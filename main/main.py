@@ -47,12 +47,12 @@ def slash():
 
 @app.route('/api/products')
 def index():
-    return jsonify.(Product.query.all())
+    return jsonify(Product.query.all())
 
 
-@app.route('/api/products/<id:int>/like', methods=['POST'])
+@app.route('/api/products/<int:id>/like', methods=['POST'])
 def like(id):
-    req = requests.get('http://localhost:8000/api/user')
+    req = requests.get('http://host.docker.internal:8000/api/user')
     json = req.json()
 
     try:

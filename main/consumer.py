@@ -1,6 +1,8 @@
-import pika
+import pika, json
 
-params = pika.URLParameters("localhost")
+from main import Product, db
+
+params = pika.URLParameters("amqp://admin:2222@host.docker.internal:5672/")
 
 connection = pika.BlockingConnection(params)
 
@@ -42,4 +44,3 @@ print('started consuming')
 channel.start_consuming()
 
 channel.close()
-
